@@ -41,7 +41,7 @@ func (s *Server) Serve() {
 		log.Fatal(err)
 	}
 	r.Post("/api/user/register", ba.AddUserCookie(s.HH.RegisterUser()))
-	// r.Post("/api/user/login", nil)
+	r.Post("/api/user/login", s.HH.LoginUser())
 	// r.Post("/api/user/orders", nil)
 	// r.Get("/api/user/orders", nil)
 	// r.Get("/api/user/balance", nil)
